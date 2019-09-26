@@ -27,7 +27,7 @@ class Trie:
         return self.__suggestion_list
 
     # recursive deep search
-    def __suggestions_recursion(self, word, node: TrieNode):
+    def __suggestions_recursion(self, word, node: TrieNode) -> None:
         if node.is_word:
             self.__suggestion_list.append(word)
         for key in node.children.keys():
